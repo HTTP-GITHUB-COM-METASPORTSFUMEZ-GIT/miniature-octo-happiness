@@ -1,0 +1,20 @@
+name: Automate Software Production
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  automate-software-production:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          pip install blackbox
+          pip install git+https://github.com/torturedbyelon/code-commentator.git
+      - name: Run code commentator
+        run: |
+          blackbox run code-commentator
