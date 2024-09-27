@@ -1,0 +1,22 @@
+import os
+import sys
+import subprocess
+
+# Get the current directory
+current_directory = os.getcwd()
+
+# Define the paths to the files
+blackboxai_path = os.path.join(current_directory, "blackboxai")
+copilot_path = os.path.join(current_directory, "copilot")
+
+# Create the directories if they don't exist
+if not os.path.exists(blackboxai_path):
+    os.makedirs(blackboxai_path)
+if not os.path.exists(copilot_path):
+    os.makedirs(copilot_path)
+
+# Install BlackboxAI
+subprocess.run([sys.executable, "-m", "pip", "install", "blackboxai"], cwd=blackboxai_path)
+
+# Install Copilot
+subprocess.run([sys.executable, "-m",

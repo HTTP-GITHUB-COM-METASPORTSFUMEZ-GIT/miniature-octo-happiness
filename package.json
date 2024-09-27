@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "ai": "^3.2.33",
+    "google-auth": "^0.0.1",
+    "save": "^2.9.0"
+  }
+}
