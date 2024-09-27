@@ -1,0 +1,1 @@
+yarn add gemini && yarn install && pip install gemini && yarn add blackbox && yarn install && npm install blackbox && npm install gemini && pip install blackbox && pip install gemini
